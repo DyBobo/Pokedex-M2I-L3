@@ -2,21 +2,36 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokédex Interactif - Dylan</title>
+    <title>Pokédex Officiel - Dylan</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Mon Pokédex</h1>
-        <div class="controls">
-            <input type="text" id="search-input" placeholder="Rechercher un Pokémon...">
-            <button id="btn-show-fav">Mes Favoris ❤️</button>
+        <h1>Pokédex L3 M2I</h1>
+        <div class="search-box">
+            <input type="text" id="search-input" placeholder="Nom ou ID (ex: 25)...">
+            <button id="search-btn">Rechercher</button>
+        </div>
+        <div id="history-container">
+            <strong>Historique :</strong>
+            <div id="history-list"></div>
         </div>
     </header>
 
-    <main id="pokemon-container"></main>
+    <section>
+        <h2>Recommandations Aléatoires</h2>
+        <div id="random-container"></div>
+    </section>
 
+    <main id="search-result">
+        </main>
+
+    <div id="pokemon-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modal-details"></div>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
