@@ -22,10 +22,11 @@ body {
 }
 
 .header-yellow {
-    background: #dc0a2d; /* Jaune comme sur l'image */
+    background: #dc0a2d; /* Rouge Pokédex */
     padding: 10px;
     border-bottom: 3px solid #333;
     text-align: center;
+    color: white;
 }
 
 .content { padding: 20px; text-align: center; }
@@ -95,3 +96,31 @@ body {
     border-radius: 10px; transition: 0.5s; z-index: 1000;
 }
 .popup.show { top: 20px; }
+
+/* --- BLOC MOBILE ADAPTÉ --- */
+@media (max-width: 600px) {
+    .main-frame {
+        width: 95%; /* Prend plus de place sur l'écran */
+        margin: 10px;
+    }
+    
+    h1 { font-size: 1.8rem; } /* Titre plus petit */
+    
+    .search-section {
+        flex-direction: column; /* On empile la barre et le bouton */
+        align-items: center;
+    }
+
+    #search-input { 
+        width: 85%; 
+    }
+    
+    .pokemon-grid img { 
+        width: 65px; /* Images légèrement réduites */
+    }
+
+    .modal-content {
+        width: 85%; /* La fenêtre de stats s'adapte à la largeur */
+        margin: 25% auto;
+    }
+}
